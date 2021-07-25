@@ -1,4 +1,4 @@
-# mighty_ui_kit
+# LoopTas UI
 
 A new Flutter application.
 
