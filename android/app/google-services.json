@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "799316852041",
+    "project_id": "looptas-nfc",
+    "storage_bucket": "looptas-nfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799316852041:android:8d29938c2cf66752456e98",
+        "android_client_info": {
+          "package_name": "user.app.looptas.nl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799316852041-orortsfvi7o331m05rb61nt6snqlpfdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKmrjCdjNEQwZzFdNUEmcny1SaAGDqF44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799316852041-orortsfvi7o331m05rb61nt6snqlpfdu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "799316852041-gtp7jnc5dci8o4qlfqcrupq7d9dr9q9l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "user.app.looptas.nl"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
