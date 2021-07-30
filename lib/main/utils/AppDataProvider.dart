@@ -126,7 +126,7 @@ List<AppModel> getAppsAndWidgets() {
       description: 'Ready-made Integrations',
       subKit: getCodeSnippetsList()));
   list.add(AppModel(
-      title: 'Semua App UI',
+      title: 'LoopTas',
       description: '${getFullAppsList().length} Apps',
       subKit: getFullAppsList()));
 
@@ -323,8 +323,8 @@ List<AppModel> getFullAppsList() {
   List<AppModel> list = [];
 
   list.add(AppModel(
-      title: 'Finance',
-      description: 'Premium Finance Mobile App UI Kit',
+      title: 'LoopTas',
+      description: 'LoopTas UI',
       widget: FASplashScreen(),
       isDarkModeSupported: true,
       themeType: ThemeTypeFullApp,

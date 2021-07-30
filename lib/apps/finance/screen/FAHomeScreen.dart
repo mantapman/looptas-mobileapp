@@ -51,7 +51,9 @@ class FAHomeScreenState extends State<FAHomeScreen> {
                 automaticallyImplyLeading: false,
                 title: Row(
                   children: [
-                    Text('Finance', style: boldTextStyle(color: Colors.white, size: 22)).expand(),
+                    Text('LoopTas',
+                            style: boldTextStyle(color: Colors.white, size: 22))
+                        .expand(),
                     Container(
                       height: 40,
                       padding: EdgeInsets.only(left: 16, right: 16),
@@ -63,11 +65,14 @@ class FAHomeScreenState extends State<FAHomeScreen> {
                         child: DropdownButton<String>(
                           value: selectedAmount,
                           dropdownColor: Colors.grey[600],
-                          icon: Icon(Icons.keyboard_arrow_down, color: Colors.white),
-                          items: <String>['*2563', '*4523', '*1236', '*6522'].map((String value) {
+                          icon: Icon(Icons.keyboard_arrow_down,
+                              color: Colors.white),
+                          items: <String>['*2563', '*4523', '*1236', '*6522']
+                              .map((String value) {
                             return new DropdownMenuItem<String>(
                               value: value,
-                              child: Text(value, style: primaryTextStyle(color: Colors.white)),
+                              child: Text(value,
+                                  style: primaryTextStyle(color: Colors.white)),
                             );
                           }).toList(),
                           onChanged: (newValue) {
@@ -93,7 +98,8 @@ class FAHomeScreenState extends State<FAHomeScreen> {
             child: Container(
               height: context.height(),
               decoration: boxDecorationWithShadow(
-                backgroundColor: appStore.isDarkModeOn ? scaffoldColorDark : Colors.white,
+                backgroundColor:
+                    appStore.isDarkModeOn ? scaffoldColorDark : Colors.white,
                 boxShadow: defaultBoxShadow(),
               ),
               child: Column(
@@ -101,7 +107,8 @@ class FAHomeScreenState extends State<FAHomeScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   24.height,
-                  Text('Upcoming', style: boldTextStyle(size: 18)).paddingOnly(left: 16, right: 16),
+                  Text('Upcoming', style: boldTextStyle(size: 18))
+                      .paddingOnly(left: 16, right: 16),
                   8.height,
                   Text(
                     'You have 6 upcoming subscriptions',

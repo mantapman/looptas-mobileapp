@@ -58,11 +58,13 @@ class FASignInScreenState extends State<FASignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: appStore.isDarkModeOn ? scaffoldColorDark : fa_color_background,
+      backgroundColor:
+          appStore.isDarkModeOn ? scaffoldColorDark : fa_color_background,
       appBar: faAppbarWidget(
         context,
         title: '',
-        backgroundColor: appStore.isDarkModeOn ? scaffoldSecondaryDark : fa_color_background,
+        backgroundColor:
+            appStore.isDarkModeOn ? scaffoldSecondaryDark : fa_color_background,
         iconColor: appStore.isDarkModeOn ? Colors.white : Colors.black,
       ),
       bottomNavigationBar: Column(
@@ -74,10 +76,16 @@ class FASignInScreenState extends State<FASignInScreen> {
             textAlign: TextAlign.center,
             maxLines: 3,
             list: [
-              TextSpan(text: "By using our mobile app, you agree to our", style: primaryTextStyle()),
-              TextSpan(text: " Terms of Use", style: boldTextStyle(decoration: TextDecoration.underline)),
+              TextSpan(
+                  text: "By using our mobile app, you agree to our",
+                  style: primaryTextStyle()),
+              TextSpan(
+                  text: " Terms of Use",
+                  style: boldTextStyle(decoration: TextDecoration.underline)),
               TextSpan(text: " and", style: primaryTextStyle()),
-              TextSpan(text: " Privacy Policy", style: boldTextStyle(decoration: TextDecoration.underline)),
+              TextSpan(
+                  text: " Privacy Policy",
+                  style: boldTextStyle(decoration: TextDecoration.underline)),
             ],
           ),
           16.height,
@@ -102,12 +110,13 @@ class FASignInScreenState extends State<FASignInScreen> {
             30.height,
             Align(
               alignment: Alignment.topLeft,
-              child: Text('Sign in', style: boldTextStyle(size: 30)),
+              child: Text('Log in', style: boldTextStyle(size: 30)),
             ),
             8.height,
             Align(
               alignment: Alignment.topLeft,
-              child: Text(fa_create_account_to_login, style: secondaryTextStyle()),
+              child:
+                  Text(fa_create_account_to_login, style: secondaryTextStyle()),
             ),
             30.height,
             Form(

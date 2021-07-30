@@ -11,20 +11,25 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-Widget faAppButtonWidget(BuildContext context, {String title, Function onTap, bool isHome}) {
+Widget faAppButtonWidget(BuildContext context,
+    {String title, Function onTap, bool isHome}) {
   return AppButton(
     width: context.width(),
     color: isHome ? Colors.grey[300] : fa_color_secondary,
-    child: Text(title, style: boldTextStyle(color: isHome ? Colors.grey : white)),
-    shapeBorder: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))),
+    child:
+        Text(title, style: boldTextStyle(color: isHome ? Colors.grey : white)),
+    shapeBorder: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(30))),
     onTap: onTap,
   );
 }
 
-Widget phoneWithCountryPickerAppTextFiled({TextEditingController controller, focus, TextFieldType textFieldType}) {
+Widget phoneWithCountryPickerAppTextFiled(
+    {TextEditingController controller, focus, TextFieldType textFieldType}) {
   return Container(
     decoration: boxDecorationWithRoundedCorners(
-      backgroundColor: appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
+      backgroundColor:
+          appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
       borderRadius: radius(12),
     ),
     child: Row(
@@ -36,7 +41,8 @@ Widget phoneWithCountryPickerAppTextFiled({TextEditingController controller, foc
           showFlag: false,
           showDropDownButton: true,
           dialogBackgroundColor: Colors.white,
-          boxDecoration: boxDecorationWithRoundedCorners(borderRadius: radius(4), backgroundColor: Colors.white),
+          boxDecoration: boxDecorationWithRoundedCorners(
+              borderRadius: radius(4), backgroundColor: Colors.white),
           textStyle: primaryTextStyle(),
         ),
         Container(height: 24, child: VerticalDivider()),
@@ -48,7 +54,7 @@ Widget phoneWithCountryPickerAppTextFiled({TextEditingController controller, foc
           maxLength: 10,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 16),
-            hintText: "Enter phone number",
+            hintText: "Enter your phone number",
             hintStyle: secondaryTextStyle(),
             counter: Offstage(),
             border: InputBorder.none,
@@ -59,7 +65,12 @@ Widget phoneWithCountryPickerAppTextFiled({TextEditingController controller, foc
   );
 }
 
-Widget faAppbarWidget(BuildContext context, {String title, List<Widget> actions, backgroundColor, iconColor, textColor}) {
+Widget faAppbarWidget(BuildContext context,
+    {String title,
+    List<Widget> actions,
+    backgroundColor,
+    iconColor,
+    textColor}) {
   return appBarWidget(
     title,
     showBack: true,
@@ -75,11 +86,15 @@ Widget faAppbarWidget(BuildContext context, {String title, List<Widget> actions,
   );
 }
 
-Widget pinCodeTextFieldWidget(BuildContext context, {StreamController errorController, TextEditingController controller, Function onChanged}) {
+Widget pinCodeTextFieldWidget(BuildContext context,
+    {StreamController errorController,
+    TextEditingController controller,
+    Function onChanged}) {
   return PinCodeTextField(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     appContext: context,
-    pastedTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
+    pastedTextStyle: TextStyle(
+        color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
     length: 4,
     obscureText: false,
     showCursor: false,
@@ -96,10 +111,14 @@ Widget pinCodeTextFieldWidget(BuildContext context, {StreamController errorContr
       shape: PinCodeFieldShape.box,
       fieldHeight: 70,
       fieldWidth: 65,
-      activeFillColor: appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
-      inactiveFillColor: appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
-      selectedFillColor: appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
-      inactiveColor: appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
+      activeFillColor:
+          appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
+      inactiveFillColor:
+          appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
+      selectedFillColor:
+          appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
+      inactiveColor:
+          appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
       selectedColor: fa_color_primary,
       borderRadius: BorderRadius.all(Radius.circular(12)),
     ),
@@ -138,11 +157,17 @@ InputDecoration faInputDecoration({String hint, Widget suffixIcon}) {
   );
 }
 
-Widget verifyCard({String image, String title, String description, String iconHeadingText, String iconHeading}) {
+Widget verifyCard(
+    {String image,
+    String title,
+    String description,
+    String iconHeadingText,
+    String iconHeading}) {
   return Container(
     decoration: boxDecorationWithShadow(
       borderRadius: radius(16),
-      backgroundColor: appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
+      backgroundColor:
+          appStore.isDarkModeOn ? scaffoldSecondaryDark : Colors.white,
     ),
     padding: EdgeInsets.all(30),
     child: Column(
@@ -153,14 +178,16 @@ Widget verifyCard({String image, String title, String description, String iconHe
         16.height,
         Text(title, style: boldTextStyle()),
         8.height,
-        Text(description, style: primaryTextStyle(), textAlign: TextAlign.center),
+        Text(description,
+            style: primaryTextStyle(), textAlign: TextAlign.center),
         30.height,
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(iconHeading, height: 24, width: 24, fit: BoxFit.fill),
             8.width,
-            Text(iconHeadingText, style: boldTextStyle(color: fa_color_secondary)),
+            Text(iconHeadingText,
+                style: boldTextStyle(color: fa_color_secondary)),
           ],
         )
       ],
@@ -184,8 +211,10 @@ InputDecoration faAddressInputDecoration({String hint}) {
     hintText: hint,
     hintStyle: secondaryTextStyle(),
     contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-    focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-    enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
+    focusedBorder:
+        OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
+    enabledBorder:
+        OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
   );
 }
 
@@ -260,7 +289,8 @@ Widget homeWidget({String icon, String title}) {
 Widget sendMoneyUserWidget({String image, String name, String type}) {
   return Row(
     children: [
-      Image.asset(image, height: 50, width: 50, fit: BoxFit.fill).cornerRadiusWithClipRRect(30),
+      Image.asset(image, height: 50, width: 50, fit: BoxFit.fill)
+          .cornerRadiusWithClipRRect(30),
       16.width,
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -287,16 +317,26 @@ InputDecoration faAmountInputDecoration({String hint, String prefixIcon}) {
       color: Colors.white,
     ).paddingAll(8),
     hintStyle: secondaryTextStyle(color: Colors.white70),
-    border: OutlineInputBorder(borderSide: BorderSide(width: 1, color: Colors.transparent)),
-    disabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 1, color: Colors.transparent)),
-    enabledBorder: OutlineInputBorder(borderSide: BorderSide(width: 1, color: Colors.transparent)),
-    errorBorder: OutlineInputBorder(borderSide: BorderSide(width: 1, color: Colors.transparent)),
-    focusedBorder: OutlineInputBorder(borderSide: BorderSide(width: 1, color: Colors.transparent)),
-    focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(width: 1, color: Colors.transparent)),
+    border: OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.transparent)),
+    disabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.transparent)),
+    enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.transparent)),
+    errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.transparent)),
+    focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.transparent)),
+    focusedErrorBorder: OutlineInputBorder(
+        borderSide: BorderSide(width: 1, color: Colors.transparent)),
   );
 }
 
-Widget faTitleWidget({String title, Color titleColor, TextStyle subTitleStyle, String subTitle}) {
+Widget faTitleWidget(
+    {String title,
+    Color titleColor,
+    TextStyle subTitleStyle,
+    String subTitle}) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
@@ -309,7 +349,8 @@ Widget faTitleWidget({String title, Color titleColor, TextStyle subTitleStyle, S
 Widget activityTabBar(BuildContext context, {TabController tabController}) {
   return Container(
     height: 40,
-    margin: EdgeInsets.only(left: context.width() * 0.1, right: context.width() * 0.1),
+    margin: EdgeInsets.only(
+        left: context.width() * 0.1, right: context.width() * 0.1),
     decoration: BoxDecoration(
       color: fa_color_secondary.withOpacity(0.3),
       borderRadius: BorderRadius.circular(25.0),

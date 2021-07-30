@@ -1,10 +1,14 @@
-const MainAppName = 'Mighty UI Kit';
+const MainAppName = 'Welcome to LoopTas';
 
 //region URLs
-const DocumentationUrl = 'https://meetmighty.com/codecanyon/document/mighty-ui-kit/index.html';
-const PrivacyPolicyUrl = 'https://meetmighty.com/codecanyon/document/mighty-ui-kit/index.html#mm-privacy-policy';
-const ChangeLogUrl = 'https://meetmighty.com/codecanyon/document/mighty-ui-kit/index.html#mm-changelog';
-const BuyUrl = 'https://codecanyon.net/item/mightyuikit-flutter-ui-kit/30183995?s_rank=1';
+const DocumentationUrl =
+    'https://meetmighty.com/codecanyon/document/mighty-ui-kit/index.html';
+const PrivacyPolicyUrl =
+    'https://meetmighty.com/codecanyon/document/mighty-ui-kit/index.html#mm-privacy-policy';
+const ChangeLogUrl =
+    'https://meetmighty.com/codecanyon/document/mighty-ui-kit/index.html#mm-changelog';
+const BuyUrl =
+    'https://codecanyon.net/item/mightyuikit-flutter-ui-kit/30183995?s_rank=1';
 const PortfolioUrl = 'https://codecanyon.net/user/meetmighty/portfolio';
 //endregion
 

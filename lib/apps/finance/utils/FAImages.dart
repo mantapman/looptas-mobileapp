@@ -1,4 +1,4 @@
-const fa_app_logo = 'images/finance/fa_app_logo.png';
+const fa_app_logo = 'images/finance/looptas-orange.png';
 const fa_google_map_image = 'images/finance/fa_google_map.png';
 const fa_congratulation_image = 'images/finance/fa_congratulation.png';
 const fa_gov_id_proof_image = 'images/finance/fa_government_id_proof.jpg';

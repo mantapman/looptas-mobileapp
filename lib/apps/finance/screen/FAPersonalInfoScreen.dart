@@ -52,18 +52,21 @@ class FAPersonalInfoScreenState extends State<FAPersonalInfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: appStore.isDarkModeOn ? scaffoldColorDark : fa_color_background,
+      backgroundColor:
+          appStore.isDarkModeOn ? scaffoldColorDark : fa_color_background,
       appBar: faAppbarWidget(
         context,
         title: '',
-        backgroundColor: appStore.isDarkModeOn ? scaffoldSecondaryDark : fa_color_background,
+        backgroundColor:
+            appStore.isDarkModeOn ? scaffoldSecondaryDark : fa_color_background,
         iconColor: appStore.isDarkModeOn ? Colors.white : Colors.black,
       ),
       bottomNavigationBar: AppButton(
         width: context.width(),
-        child: Text("Continue", style: boldTextStyle(color: white)),
-        color: fa_color_secondary,
-        shapeBorder: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))),
+        child: Text("Submit", style: boldTextStyle(color: white)),
+        color: fa_color_primary,
+        shapeBorder: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(30))),
         onTap: () {
           FAAddressScreen().launch(context);
         },
@@ -73,7 +76,7 @@ class FAPersonalInfoScreenState extends State<FAPersonalInfoScreen> {
           children: [
             Align(
               alignment: Alignment.topLeft,
-              child: Text('Personal Info', style: boldTextStyle(size: 30)),
+              child: Text('Profile', style: boldTextStyle(size: 30)),
             ),
             8.height,
             Text(fa_personal_info, style: secondaryTextStyle()),
@@ -101,11 +104,21 @@ class FAPersonalInfoScreenState extends State<FAPersonalInfoScreen> {
                   ),
                   16.height,
                   AppTextField(
+                    controller: lNameController,
+                    focus: lNameFocusNode,
+                    nextFocus: dateOfBirthNameFocusNode,
+                    decoration: faInputDecoration(hint: 'Address'),
+                    textFieldType: TextFieldType.ADDRESS,
+                    keyboardType: TextInputType.streetAddress,
+                  ),
+                  16.height,
+                  AppTextField(
                     controller: dateOfBirthController,
                     focus: dateOfBirthNameFocusNode,
                     nextFocus: securityNumberFocusNode,
                     readOnly: true,
-                    decoration: faInputDecoration(hint: 'Date of Birth ( MM / DD /YYYY)'),
+                    decoration: faInputDecoration(
+                        hint: 'Date of Birth ( MM / DD /YYYY)'),
                     suffix: Icon(Icons.calendar_today_rounded),
                     textFieldType: TextFieldType.OTHER,
                     onTap: () async {
@@ -117,7 +130,9 @@ class FAPersonalInfoScreenState extends State<FAPersonalInfoScreen> {
                         lastDate: DateTime(2100),
                       );
                       if (_dobDate != null && _dobDate != DateTime.now()) {
-                        dateOfBirthController.text = '${_dobDate.month}/' + '${_dobDate.day}/' + '${_dobDate.year}';
+                        dateOfBirthController.text = '${_dobDate.month}/' +
+                            '${_dobDate.day}/' +
+                            '${_dobDate.year}';
                       }
                     },
                   ),
@@ -125,13 +140,15 @@ class FAPersonalInfoScreenState extends State<FAPersonalInfoScreen> {
                   AppTextField(
                     controller: securityNumberController,
                     textFieldType: TextFieldType.OTHER,
-                    decoration: faInputDecoration(hint: 'Social security number (last 4 digits)'),
+                    decoration: faInputDecoration(
+                        hint: 'Social security number (last 4 digits)'),
                     focus: securityNumberFocusNode,
                     suffix: Icon(Icons.lock),
                     maxLength: 4,
                   ),
                   16.height,
-                  Text(fa_encryption_security, style: secondaryTextStyle(color: Colors.black)),
+                  Text(fa_encryption_security,
+                      style: secondaryTextStyle(color: Colors.black)),
                 ],
               ),
             )

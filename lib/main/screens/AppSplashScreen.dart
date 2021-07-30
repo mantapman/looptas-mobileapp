@@ -25,7 +25,7 @@ class AppSplashScreenState extends State<AppSplashScreen> {
 
   Future<void> init() async {
     remoteConfig = await setUpRemoteConfig().catchError(log);
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 3));
 
     defaultBlurRadius = 10.0;
     defaultSpreadRadius = 0.5;
@@ -47,7 +47,7 @@ class AppSplashScreenState extends State<AppSplashScreen> {
         children: [
           SizedBox(),
           SizedBox(),
-          Image.asset('images/app/app_icon.png', height: 130),
+          Image.asset('images/app/looptas-orange.png', height: 130),
           Text(MainAppName, style: boldTextStyle(size: 24)),
           SizedBox(),
         ],
